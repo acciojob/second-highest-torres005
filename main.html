@@ -9,39 +9,26 @@
 <body>	
 	<script>
 		function secondHighest(arr) {
-            let m =  arr.sort()[arr.length-2];
-			return m;
-		}
-		if(arr.length === 1){
-			return -Infinity;
-		}
-			
-		
 			//Write your code here
+			let max= Number.MIN_VALUE;;
 			
-			// let max =0;
-			// let min =0;
-			// for(let i=0; i<arr.length;i++){
-			// 	if(arr[i]>max){
-   //                    min = max;
-			// 		max=arr[i];
-			// 	}
-			// 	else if (maxarr[i]>min)
-			// 	{
-			// 		min =arr[i];
-			// 	}
+			let secondmax= Number.MIN_VALUE;
+			for(let i=0;i<arr.length;i++){
+				if(arr[i]>max){
+					secondmax=max;
+
+					
+					max=arr[i];
+				}   else if( arr[i] > secondmax && arr[i] != max){
+            secondmax = arr[i];
+        }
 				
-			// }
-			// return secondHighest;
-
+			}return secondmax;
 			
-			
-		 
+		}
 		
 
-		
-/* 		
-	function Main() {
+		function Main() {
 			var n = prompt("Enter the number of elements");
 			var arr = [];
 			for (var i = 0; i < n; i++) {
@@ -50,7 +37,7 @@
 			alert(secondHighest(arr));
 		}
 		Main();
-	</script> */
+	</script>
 
     <script type="text/javascript" src="./script.js">
 </script>
