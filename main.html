@@ -11,17 +11,16 @@
 		function secondHighest(arr) {
 			//Write your code here
 			let max= Number.MIN_VALUE;;
-			
 			let secondmax= Number.MIN_VALUE;
 			for(let i=0;i<arr.length;i++){
 				if(arr[i]>max){
 					secondmax=max;
-
-					
-					max=arr[i];
-				}   else if( arr[i] > secondmax && arr[i] != max){
-            secondmax = arr[i];
-        }
+                     max=arr[i];
+				}  
+				else if(arr[i] > secondmax && arr[i] != max)
+				{
+                secondmax = arr[i];
+                }
 				
 			}return secondmax;
 			
@@ -34,9 +33,9 @@
 			for (var i = 0; i < n; i++) {
 				arr[i] = prompt("Enter element " + (i+1));
 			}
-			alert(secondHighest(arr));
+			 alert(secondHighest(arr));
 		}
-		Main();
+		// Main();
 	</script>
 
     <script type="text/javascript" src="./script.js">
